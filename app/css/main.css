@@ -1,3 +1,12 @@
+#clipboardNotSupported {
+    display: none;
+    color: #ca2828;
+}
+
+.show-msg {
+    display: inline-block !important;
+}
+
 .wp-test {
     width: 100%;
 }

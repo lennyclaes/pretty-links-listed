@@ -16,6 +16,11 @@ function pr_listed_redirects_to($slug) {
 ?>
 
 <div class="wrap">
+    <h1 class="pl_page_title">Pretty Links List</h1>
+    <p>
+        This page shows the links created by the Pretty Links plugin. <br />
+        Click the links to copy it to your clipboard <span id="clipboardNotSupported">NOT SUPPORTED IN YOUR BROWSER</span>
+    </p>
     <div class="wp-test">
         <div class='pl_listed_row'>
             <div class='pl_listed_cell'>
@@ -27,25 +32,27 @@ function pr_listed_redirects_to($slug) {
         </div>
         <div>
             <?php
-            $rows = pl_listed_load();
+            $rows = pl_listed_load_data();
+            $row_index = 0;
             foreach ($rows as $row) {
                 $redirect_link = pr_listed_redirects_to($row->slug);
                 $launch_icon = get_icons();
                 $url = $row->url;
                 echo "<div class='pl_listed_row'>
                     <div class='pl_listed_cell'>
-                        <div class='pl_listed_url'>{$redirect_link}</div>
+                        <div id='redirect_{$row_index}' class='pl_listed_url'>{$redirect_link}</div>
                         <div class='pl_listed_actions'>
                             <a class='pl_listed_actions-link' href='{$redirect_link}' target='_blank' rel='noopener'>{$launch_icon}</a>
                         </div>
                     </div>
                     <div class='pl_listed_cell'>
-                        <div class='pl_listed_url'>{$url}</div>
+                        <div id='url_{$row_index}' class='pl_listed_url'>{$url}</div>
                         <div class='pl_listed_actions'>
                             <a class='pl_listed_actions-link' href='{$url}' target='_blank' rel='noopener'>{$launch_icon}</a>
                         </div>
                     </div>
                 </div>";
+                $row_index++;
             }
             ?>
         </div>
