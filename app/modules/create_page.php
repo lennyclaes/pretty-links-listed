@@ -2,7 +2,10 @@
 require __DIR__.'/db_connect.php';
 
 function get_protocol() {
-    $protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
+    $protocol = "http://";
+    if(isset($_SERVER['HTTPS'])) {
+        $protocol = "https://";
+    }
     return $protocol;
 }
 

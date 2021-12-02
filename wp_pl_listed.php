@@ -4,7 +4,7 @@
  * Plugin name: Pretty Links Listed
  * Description: A plugin to list the URLs created by Pretty Links to Authors
  * Author: Lenny Claes
- * Version: 1.0.1
+ * Version: 1.0.2
  */
 
 add_action('admin_menu', 'pl_listed_setup_menu');
