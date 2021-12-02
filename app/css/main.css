@@ -1,0 +1,36 @@
+.wp-test {
+    width: 100%;
+}
+
+.pl_listed_cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: inline;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #c3c3c3;
+}
+
+.pl_listed_row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pl_listed_actions {
+    width: auto;
+}
+
+.pl_listed_url {
+    width: auto;
+}
+
+.pl_listed_actions-link {
+    fill: #909090;
+    transition: 0.2s linear;
+}
+
+.pl_listed_actions-link:hover {
+    fill: #090909;
+}
