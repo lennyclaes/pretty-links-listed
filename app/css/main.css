@@ -7,10 +7,6 @@
     display: inline-block !important;
 }
 
-.wp-test {
-    width: 100%;
-}
-
 .pl_listed_cell {
     display: flex;
     justify-content: space-between;
@@ -27,12 +23,9 @@
     align-items: center;
 }
 
-.pl_listed_actions {
-    width: auto;
-}
-
 .pl_listed_url {
-    width: auto;
+    cursor: pointer;
+    transition: 0.2s linear;
 }
 
 .pl_listed_actions-link {
@@ -40,6 +33,7 @@
     transition: 0.2s linear;
 }
 
-.pl_listed_actions-link:hover {
+.pl_listed_actions-link:hover, .pl_listed_url:hover {
     fill: #090909;
+    color: #090909;
 }
